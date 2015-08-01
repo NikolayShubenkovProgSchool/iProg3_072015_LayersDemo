@@ -55,17 +55,18 @@
 
 - (IBAction)checkPasPressed:(id)sender
 {
-    [UIView animateWithDuration:0.1 animations:^{
-        self.textFieldConstraint.constant = 50;
-        [self.view layoutIfNeeded];
-    } completion:^(BOOL finished) {
+    POPBasicAnimation *toRight = [POPBasicAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];
+    toRight.toValue = @50;
+    toRight.duration = 0.1;
+    [toRight setCompletionBlock:^(POPAnimation *compeltedAnimation, BOOL finished) {
+
         POPSpringAnimation *animation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];
         animation.toValue = @0;
         animation.springSpeed = 16;
         animation.springBounciness = 15;
         [self.textFieldConstraint pop_addAnimation:animation forKey:@"bounce"];
     }];
-    
+    [self.textFieldConstraint pop_addAnimation:toRight forKey:@"right"];
 }
 
 
