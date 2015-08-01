@@ -62,14 +62,23 @@
     layer.emitterCells = @[heartCell];
 }
 
+-(void)setXAcceleration
+{
+    self.cell.yAcceleration = 0;
+    self.cell.xAcceleration = 170;
+}
+
+-(void)setYAcceleration
+{
+    self.cell.xAcceleration = 0;
+    self.cell.yAcceleration = -270;
+}
+
 - (void)setEmittingPosition:(CGPoint)position
 {
     CAEmitterLayer *layer = (CAEmitterLayer *)self.layer;
-
-    if ([self checkTouchInViewForPoint:position]){
-        layer.emitterPosition = position;
-        [self startEmitting];
-    }
+    layer.emitterPosition = position;
+    [self startEmitting];
 }
 
 -(BOOL)checkTouchInViewForPoint:(CGPoint)point

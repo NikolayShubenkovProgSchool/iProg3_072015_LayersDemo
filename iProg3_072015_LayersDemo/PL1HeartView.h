@@ -10,6 +10,10 @@
 
 @interface PL1HeartView : UIView
 
+-(void)setXAcceleration;
+-(void)setYAcceleration;
+
+
 - (void)startEmitting;
 - (void)stopEmitting;
 - (void)setEmittingPosition:(CGPoint)position;

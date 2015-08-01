@@ -16,6 +16,14 @@
 @end
 
 @implementation PL1LoveViewController
+- (IBAction)leftAceleration:(id)sender {
+    [self.heartView setXAcceleration];
+}
+- (IBAction)upAceleration:(id)sender {
+    [self.heartView setYAcceleration];
+}
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
