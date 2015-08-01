@@ -74,6 +74,12 @@
     self.cell.yAcceleration = -270;
 }
 
+-(void)setNormalAcceleration
+{
+    self.cell.xAcceleration = 0;
+    self.cell.yAcceleration = 0;
+}
+
 - (void)setEmittingPosition:(CGPoint)position
 {
     CAEmitterLayer *layer = (CAEmitterLayer *)self.layer;

@@ -22,6 +22,10 @@
 - (IBAction)upAceleration:(id)sender {
     [self.heartView setYAcceleration];
 }
+- (IBAction)normalAceleration:(id)sender {
+    [self.heartView setNormalAcceleration];
+}
+
 
 
 

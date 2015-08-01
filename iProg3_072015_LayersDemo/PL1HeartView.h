@@ -12,7 +12,7 @@
 
 -(void)setXAcceleration;
 -(void)setYAcceleration;
-
+-(void)setNormalAcceleration;
 
 - (void)startEmitting;
 - (void)stopEmitting;
