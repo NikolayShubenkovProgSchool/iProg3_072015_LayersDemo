@@ -18,6 +18,7 @@
 		4FE454211B6CC1C500C66157 /* PL1LiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE454201B6CC1C500C66157 /* PL1LiveButton.m */; };
 		4FE454241B6CC7C700C66157 /* EnterPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE454231B6CC7C700C66157 /* EnterPassViewController.m */; };
 		4FE454271B6CCE0D00C66157 /* PL1LoveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE454261B6CCE0D00C66157 /* PL1LoveViewController.m */; };
+		4FE4542A1B6CDF9800C66157 /* PL1HeartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE454291B6CDF9800C66157 /* PL1HeartView.m */; };
 		E6C03E48C3335FD2EF6DA623 /* libPods-iProg3_072015_LayersDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E8AB74C44724AFB9F6A3A /* libPods-iProg3_072015_LayersDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,8 @@
 		4FE454231B6CC7C700C66157 /* EnterPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterPassViewController.m; sourceTree = "<group>"; };
 		4FE454251B6CCE0D00C66157 /* PL1LoveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PL1LoveViewController.h; path = ../PL1LoveViewController.h; sourceTree = "<group>"; };
 		4FE454261B6CCE0D00C66157 /* PL1LoveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PL1LoveViewController.m; path = ../PL1LoveViewController.m; sourceTree = "<group>"; };
+		4FE454281B6CDF9800C66157 /* PL1HeartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PL1HeartView.h; sourceTree = "<group>"; };
+		4FE454291B6CDF9800C66157 /* PL1HeartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PL1HeartView.m; sourceTree = "<group>"; };
 		6A40B3E8189F6EF963C89B79 /* Pods-iProg3_072015_LayersDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProg3_072015_LayersDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iProg3_072015_LayersDemo/Pods-iProg3_072015_LayersDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A8887BC9330B7CD6C944986D /* Pods-iProg3_072015_LayersDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProg3_072015_LayersDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iProg3_072015_LayersDemo/Pods-iProg3_072015_LayersDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BA3E1E4BA1490D8928D38C83 /* Pods-iProg3_072015_LayersDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProg3_072015_LayersDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iProg3_072015_LayersDemoTests/Pods-iProg3_072015_LayersDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 		4F55C2191B6CA83F00E579A7 /* iProg3_072015_LayersDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4FE454281B6CDF9800C66157 /* PL1HeartView.h */,
+				4FE454291B6CDF9800C66157 /* PL1HeartView.m */,
 				4FE454251B6CCE0D00C66157 /* PL1LoveViewController.h */,
 				4FE454261B6CCE0D00C66157 /* PL1LoveViewController.m */,
 				4F55C21E1B6CA83F00E579A7 /* AppDelegate.h */,
@@ -336,6 +341,7 @@
 				4FE454241B6CC7C700C66157 /* EnterPassViewController.m in Sources */,
 				4F55C2231B6CA83F00E579A7 /* ViewController.m in Sources */,
 				4F55C2201B6CA83F00E579A7 /* AppDelegate.m in Sources */,
+				4FE4542A1B6CDF9800C66157 /* PL1HeartView.m in Sources */,
 				4F55C21D1B6CA83F00E579A7 /* main.m in Sources */,
 				4FE454271B6CCE0D00C66157 /* PL1LoveViewController.m in Sources */,
 				4FE454211B6CC1C500C66157 /* PL1LiveButton.m in Sources */,
