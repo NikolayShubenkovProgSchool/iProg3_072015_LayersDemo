@@ -15,6 +15,8 @@
 		4F55C2281B6CA83F00E579A7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F55C2271B6CA83F00E579A7 /* Images.xcassets */; };
 		4F55C22B1B6CA83F00E579A7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F55C2291B6CA83F00E579A7 /* LaunchScreen.xib */; };
 		4F55C2371B6CA83F00E579A7 /* iProg3_072015_LayersDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F55C2361B6CA83F00E579A7 /* iProg3_072015_LayersDemoTests.m */; };
+		4FE454211B6CC1C500C66157 /* PL1LiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE454201B6CC1C500C66157 /* PL1LiveButton.m */; };
+		4FE454241B6CC7C700C66157 /* EnterPassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE454231B6CC7C700C66157 /* EnterPassViewController.m */; };
 		E6C03E48C3335FD2EF6DA623 /* libPods-iProg3_072015_LayersDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017E8AB74C44724AFB9F6A3A /* libPods-iProg3_072015_LayersDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +46,10 @@
 		4F55C2301B6CA83F00E579A7 /* iProg3_072015_LayersDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iProg3_072015_LayersDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F55C2351B6CA83F00E579A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F55C2361B6CA83F00E579A7 /* iProg3_072015_LayersDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iProg3_072015_LayersDemoTests.m; sourceTree = "<group>"; };
+		4FE4541F1B6CC1C500C66157 /* PL1LiveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PL1LiveButton.h; sourceTree = "<group>"; };
+		4FE454201B6CC1C500C66157 /* PL1LiveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PL1LiveButton.m; sourceTree = "<group>"; };
+		4FE454221B6CC7C700C66157 /* EnterPassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterPassViewController.h; sourceTree = "<group>"; };
+		4FE454231B6CC7C700C66157 /* EnterPassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterPassViewController.m; sourceTree = "<group>"; };
 		6A40B3E8189F6EF963C89B79 /* Pods-iProg3_072015_LayersDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProg3_072015_LayersDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iProg3_072015_LayersDemo/Pods-iProg3_072015_LayersDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A8887BC9330B7CD6C944986D /* Pods-iProg3_072015_LayersDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProg3_072015_LayersDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iProg3_072015_LayersDemo/Pods-iProg3_072015_LayersDemo.release.xcconfig"; sourceTree = "<group>"; };
 		BA3E1E4BA1490D8928D38C83 /* Pods-iProg3_072015_LayersDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iProg3_072015_LayersDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iProg3_072015_LayersDemoTests/Pods-iProg3_072015_LayersDemoTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,7 +115,11 @@
 				4F55C2211B6CA83F00E579A7 /* ViewController.h */,
 				4F55C2221B6CA83F00E579A7 /* ViewController.m */,
 				4F55C2241B6CA83F00E579A7 /* Main.storyboard */,
+				4FE454221B6CC7C700C66157 /* EnterPassViewController.h */,
+				4FE454231B6CC7C700C66157 /* EnterPassViewController.m */,
 				4F55C2271B6CA83F00E579A7 /* Images.xcassets */,
+				4FE4541F1B6CC1C500C66157 /* PL1LiveButton.h */,
+				4FE454201B6CC1C500C66157 /* PL1LiveButton.m */,
 				4F55C2291B6CA83F00E579A7 /* LaunchScreen.xib */,
 				4F55C21A1B6CA83F00E579A7 /* Supporting Files */,
 			);
@@ -318,9 +328,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FE454241B6CC7C700C66157 /* EnterPassViewController.m in Sources */,
 				4F55C2231B6CA83F00E579A7 /* ViewController.m in Sources */,
 				4F55C2201B6CA83F00E579A7 /* AppDelegate.m in Sources */,
 				4F55C21D1B6CA83F00E579A7 /* main.m in Sources */,
+				4FE454211B6CC1C500C66157 /* PL1LiveButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
