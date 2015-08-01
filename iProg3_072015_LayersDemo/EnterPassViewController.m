@@ -49,8 +49,6 @@
                             
                          }];
                      }];
-
-    
 }
 
 - (IBAction)checkPasPressed:(id)sender
