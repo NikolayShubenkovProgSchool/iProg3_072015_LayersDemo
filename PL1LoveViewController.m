@@ -7,8 +7,11 @@
 //
 
 #import "PL1LoveViewController.h"
+#import "PL1HeartView.h"
 
 @interface PL1LoveViewController ()
+@property (weak, nonatomic) IBOutlet PL1HeartView *heartView;
+
 
 @end
 
@@ -16,29 +19,43 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
+}
+
+
+-(void)showHeartsFromTouches:(nonnull NSSet*)touches
+{
+    UITouch *touch = [touches anyObject];
+    CGPoint aPoint = [touch locationInView:self.heartView];
+//    [self.heartView startEmitting];
+    [self.heartView setEmittingPosition:aPoint];
+    [self.heartView startEmitting];
 }
 
 - (void)touchesBegan:(nonnull NSSet*)touches withEvent:(nullable UIEvent *)event
 {
-    UITouch *touch = [touches anyObject];
-//    CGPoint aPoint = [touch locationInView:(UIView *)]
+    [self showHeartsFromTouches:touches];
+    
 
 }
 
 - (void)touchesMoved:(nonnull NSSet*)touches withEvent:(nullable UIEvent *)event
 {
+    [self showHeartsFromTouches:touches];
     
 }
 
 - (void)touchesEnded:(nonnull NSSet*)touches withEvent:(nullable UIEvent *)event
 {
+   
+    [self.heartView stopEmitting];
     
 }
 
 - (void)touchesCancelled:(nullable NSSet*)touches withEvent:(nullable UIEvent *)event
 {
-    
+    [self.heartView stopEmitting];
 }
 
 @end

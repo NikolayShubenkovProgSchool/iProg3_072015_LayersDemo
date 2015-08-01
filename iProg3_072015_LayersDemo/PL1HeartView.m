@@ -7,6 +7,12 @@
 //
 
 #import "PL1HeartView.h"
+#import "PL1LoveViewController.h"
+@interface PL1HeartView ()
+
+@property (weak, nonatomic) CAEmitterCell *cell;
+
+@end
 
 @implementation PL1HeartView
 
@@ -34,13 +40,13 @@
     //Контейнер частиц
     CAEmitterLayer *layer = (CAEmitterLayer *)self.layer;
     layer.frame = self.bounds;
-    layer.emitterPosition = self.center;
+    layer.emitterPosition = CGPointMake(-50, -50);
     layer.emitterSize = CGSizeMake(50, 50);
-    layer.emitterShape = @"sphere";
+//    layer.emitterShape = @"sphere";
     
     //частицы
     CAEmitterCell *heartCell = [CAEmitterCell emitterCell];
-    heartCell.birthRate = 15;
+    heartCell.birthRate = 0;
     heartCell.lifetime  = 8;
     heartCell.lifetimeRange = 4;
     heartCell.contents = (id) [[UIImage imageNamed:@"heart"] CGImage];
@@ -50,9 +56,64 @@
     
     heartCell.spin = 0.5;
     heartCell.scale = 0.1;
+    heartCell.name = @"love";
+    self.cell = heartCell;
     
     layer.emitterCells = @[heartCell];
 }
+
+- (void)setEmittingPosition:(CGPoint)position
+{
+    CAEmitterLayer *layer = (CAEmitterLayer *)self.layer;
+
+    if ([self checkTouchInViewForPoint:position]){
+        layer.emitterPosition = position;
+        [self startEmitting];
+    }
+}
+
+-(BOOL)checkTouchInViewForPoint:(CGPoint)point
+{
+    CGRect boundsRect = self.bounds;
+    return CGRectContainsPoint(boundsRect, point);
+}
+
+
+- (void)stopEmitting
+{
+    CAEmitterLayer *layer = (CAEmitterLayer *)self.layer;
+    [layer setValue:@0 forKeyPath:@"emitterCells.love.birthRate"];
+    layer.emitterPosition = CGPointMake(-50, -50);
+}
+
+- (void)startEmitting
+{
+    CAEmitterLayer *layer =  (CAEmitterLayer *)self.layer;
+    if (![self checkTouchInViewForPoint:layer.emitterPosition]) {
+        return;
+    }
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                         CAEmitterLayer *layer = (CAEmitterLayer *)self.layer;
+                         [layer setValue:@15 forKeyPath:@"emitterCells.love.birthRate"];
+
+                     }];
+}
+
+
+
+
+//CAEmitterLayer *layer = (CAEmitterLayer *)self.layer;
+//[layer setValue:@15 forKey:@"heart"];
+
+
+
+
+
+
+
+
+
 
 
 @end
