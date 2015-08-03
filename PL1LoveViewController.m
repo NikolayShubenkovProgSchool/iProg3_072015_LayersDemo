@@ -40,7 +40,7 @@
 {
     UITouch *touch = [touches anyObject];
     CGPoint aPoint = [touch locationInView:self.heartView];
-//    [self.heartView startEmitting];
+    [self.heartView setAccelerationDuringNow:aPoint.x :aPoint.y];
     [self.heartView setEmittingPosition:aPoint];
     [self.heartView startEmitting];
 }

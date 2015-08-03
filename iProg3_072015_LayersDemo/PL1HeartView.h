@@ -14,6 +14,7 @@
 -(void)setYAcceleration;
 -(void)setNormalAcceleration;
 
+-(void)setAccelerationDuringNow:(CGFloat)x :(CGFloat)y;
 - (void)startEmitting;
 - (void)stopEmitting;
 - (void)setEmittingPosition:(CGPoint)position;

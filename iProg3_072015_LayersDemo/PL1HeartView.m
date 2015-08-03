@@ -42,8 +42,7 @@
     layer.frame = self.bounds;
     layer.emitterPosition = CGPointMake(-50, -50);
     layer.emitterSize = CGSizeMake(50, 50);
-//    layer.emitterShape = @"sphere";
-    
+
     //частицы
     CAEmitterCell *heartCell = [CAEmitterCell emitterCell];
     heartCell.birthRate = 0;
@@ -53,13 +52,20 @@
     
     heartCell.velocity = 100;
     heartCell.emissionRange = 2 * M_PI;
-    
+
     heartCell.spin = 0.5;
     heartCell.scale = 0.1;
     heartCell.name = @"love";
     self.cell = heartCell;
+
     
     layer.emitterCells = @[heartCell];
+}
+
+-(void)setAccelerationDuringNow:(CGFloat)x :(CGFloat)y
+{
+    self.cell.xAcceleration = x;
+    self.cell.yAcceleration = y;
 }
 
 -(void)setXAcceleration

@@ -24,7 +24,7 @@
 
 - (void)configureActivityIndicator
 {
-    UITableViewCellStyle style;
+//    UITableViewCellStyle style;
     
     CALayer *activityCalyer = self.activityIndicator.layer;
     activityCalyer.shadowOpacity = 0.9;
