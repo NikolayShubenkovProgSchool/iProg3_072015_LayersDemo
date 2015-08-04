@@ -62,6 +62,7 @@
     layer.emitterCells = @[heartCell];
 }
 
+#warning сам вызов изменения акселерации при вождении пальцем по экрану
 -(void)setAccelerationDuringNow:(CGFloat)x :(CGFloat)y
 {
     self.cell.xAcceleration = x;
