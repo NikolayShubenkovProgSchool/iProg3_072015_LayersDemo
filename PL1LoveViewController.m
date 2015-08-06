@@ -30,19 +30,13 @@
 
 - (void)touchesMoved:(nonnull NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event
 {
-    [UIView animateWithDuration:0.25
-                     animations:^{
-                         self.emitter.emitterPosition = [[touches anyObject] locationInView:self.view];
-                     }];
+    self.emitter.emitterPosition = [[touches anyObject] locationInView:self.view];
+    self.emitter.renderMode = kCAEmitterLayerAdditive;
 }
 
 - (void)touchesEnded:(nonnull NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event
 {
-//    self.emitter.beginTime = CACurrentMediaTime();
-    [UIView animateWithDuration:0.25
-                     animations:^{
-                         self.emitter.lifetime  = 0;
-                     }];
+    self.emitter.lifetime  = 0;
 }
 
 - (void)createLoveLayer
