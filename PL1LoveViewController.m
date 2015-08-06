@@ -10,6 +10,8 @@
 
 @interface PL1LoveViewController ()
 
+@property (nonatomic, strong) CAEmitterLayer *emitter;
+
 @end
 
 @implementation PL1LoveViewController
@@ -20,6 +22,29 @@
     // Do any additional setup after loading the view.
 }
 
+- (void)touchesBegan:(nonnull NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event
+{
+    self.emitter.beginTime = CACurrentMediaTime();
+    self.emitter.lifetime  = 1;
+}
+
+- (void)touchesMoved:(nonnull NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event
+{
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         self.emitter.emitterPosition = [[touches anyObject] locationInView:self.view];
+                     }];
+}
+
+- (void)touchesEnded:(nonnull NSSet<UITouch *> *)touches withEvent:(nullable UIEvent *)event
+{
+//    self.emitter.beginTime = CACurrentMediaTime();
+    [UIView animateWithDuration:0.25
+                     animations:^{
+                         self.emitter.lifetime  = 0;
+                     }];
+}
+
 - (void)createLoveLayer
 {
     //Контейнер частиц
@@ -28,13 +53,14 @@
     layer.emitterPosition = self.view.center;
     layer.emitterShape = @"sphere";
     layer.emitterSize = CGSizeMake(50, 50);
-
+    self.emitter = layer;
+    self.emitter.lifetime = 0;
     
     //частицы
     CAEmitterCell *heartCell = [CAEmitterCell emitterCell];
     heartCell.birthRate = 15;
     heartCell.lifetime  = 14;
-    heartCell.lifetimeRange = 4;
+
     heartCell.contents = (id) [[UIImage imageNamed:@"heart"] CGImage];
     heartCell.yAcceleration = 100;
     
@@ -52,5 +78,7 @@
     
     [self.view.layer addSublayer:layer];
 }
+
+
 
 @end
